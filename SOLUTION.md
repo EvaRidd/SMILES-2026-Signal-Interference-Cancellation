@@ -160,7 +160,7 @@ def your_canceller(tx_n, rx):
 
 ## What Contributed Most to Improving the Metric
 
-Adding rank-1 subtraction to the baseline produced the biggest jump — from 4.02 to 7.01 dB. The second PCA pass with grid search over the coefficient and the conditional third pass contributed another 2.7 dB.
+Adding rank-1 subtraction to the baseline produced the biggest jump (from 4.02 to 7.01 dB). The second PCA pass with grid search over the coefficient and the conditional third pass contributed another 2.7 dB.
 
 The key architectural decision was to keep the TX estimation path and the external interference estimation path strictly separate. `fit_tx_prediction` operates only on the TX signal; rank-1 estimation operates only on the residual after it. As soon as these paths are mixed, the result drops below the baseline (see attempt 1).
 
